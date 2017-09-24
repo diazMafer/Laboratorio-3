@@ -5,10 +5,13 @@
  */
 
 /**
- *
- * @author Mafer
+ * @author Maria Fernanda Lopez 17160, David Uriel Soto 17551
+ * @version 24/09/2017
  */
+
+import java.util.Random;
 public class Clinica {
-    Hola!!!!!
+    //Atributos 
+    
     
 }
