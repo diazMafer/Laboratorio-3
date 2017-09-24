@@ -8,14 +8,14 @@
  */
 public class Enfermera {
     //Atributos
-    String nombre;
-    String nit;
-    String dpi;
-    String dia;
-    int guardias;
-    double salario;
-    int experiencia;
-    boolean intensivista;
+    private String nombre;
+    private String nit;
+    private String dpi;
+    private int dia;
+    private int guardias;
+    private double salario;
+    private int experiencia;
+    private boolean intensivista;
     
     /**
      * Constructor for objects of class Enfermera
@@ -52,7 +52,7 @@ public class Enfermera {
      * @param guardias
      * @return salextra
      */
-    public double setSalextra(int guardias){
+    public double calcularSalextra(int guardias){
         double salextra=0;
         if(guardias>4){
             int extras = guardias-4;
