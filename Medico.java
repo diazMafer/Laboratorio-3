@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Modela las caracteristicas de un medico de una clinica pequeña
  */
 
 /**
@@ -9,56 +7,115 @@
  * @version 23/09/2017
  */
 public class Medico {
-    //Atributos 
+    //Atributos
     private String nombre;
     private String nit;
     private String dpi;
-    private double sueldo;
-    private boolean especialista;
+    private int dia;
     private int guardias;
-    private String colegiado;
-    
-    /**
-     * Constructor for objects of class Medico
+    private double salario;
+    private int colegiado;
+    private boolean especialista;
+
+    //Constructor
+     /**
+     * Constructor for objects of class Enfermera
      * @param nombre
      * @param nit
      * @param dpi
-     * @param sueldo
-     * @param especialista
+     * @param dia
      * @param guardias
-     * @param colegiado
+     * @param salario
+     * @param experiencia
+     * @param intensivista
      */
-    public Medico(String nombre, String nit, String dpi, double sueldo, boolean especialista, int guardias, String colegiado){
-        this.nombre=nombre;
-        this.nit=nit;
-        this.dpi=dpi;
-        this.sueldo=sueldo;
-        this.especialista=especialista;
-        this.guardias=guardias;
-        this.colegiado=colegiado;
+    public Medico(String nombre, String nit, String dpi, int dia, int guardias, double salario, Strings colegiado, boolean especialista){
+    	this.nombre = nombre;
+    	this.nit = nit;
+    	this.dpi = dpi;
+    	this.dia = dia;
+    	this.guardias = guardias;
+    	this.salario = salario;
+    	this.colegiado = colegiado;
+    	this.especialista = especialista;
     }
-    
-    public boolean getEspecialista(){
-        return especialista;
-    }
-    
+
     /**
-     * Metodo para calcular el salario extra de un medico y actualizar su sueldo
-     * @param guardias 
+    *Regresa el nombre del medico
+    * @return Nombre del medico
+	*/
+	public String getNombre(){
+		return nombre;
+	}
+
+	/**
+    *Regresa el nit del medico
+    * @return Nit del medico
+	*/
+	public String getNit(){
+		return nit;
+	}
+
+	/**
+    *Regresa el dpi del medico
+    * @return Dpi del medico
+	*/
+	public String getDpi(){
+		return dpi;
+	}
+
+	/**
+    *Regresa el salario del medico
+    * @return Salario del medico
+	*/
+	public double getSalario(){
+		return salario;
+	}
+
+	/**
+    *Regresa el numero de colegiado del medico
+    * @return Colegiado del medico
+	*/
+	public String getColegiado(){
+		return colegiado;
+	}
+
+	/**
+    *Regresa si el medico es especialista o no
+    * @return Si el medico es especialista o no
+	*/
+	public boolean getEspecialista(){
+		return especialista;
+	}
+
+	/**
+    *Ingresa las guardias que ha hecho un medico
+    * @param guardias
+	*/
+    public void setGuardias(int guardias){
+        this.guardias=guardias;
+    }
+
+
+    /**
+     * Calcula el dinero a recibir por guardias extras que haya realizado la enfermera
+     * @param guardias
+     * @return salextra
      */
-    public void setSueldo(int guardias){
+    public double setSalextra(int guardias){
         double salextra=0;
         if(guardias>2){
             int extras = guardias-2;
-            salextra = extras * 900;
+            salextra = 900*extras;
         }
-        sueldo = sueldo + salextra;
+        return salextra;
     }
-    
-    public int getGuardias(){
-        return guardias;
-    }
-    
-    
-    
+
+	/**
+    *Ingresa el salario de un medico
+    * @param salextra
+	*/    
+    public void setSalario(double salextra){
+        this.salario=salario+salextra;
+    }    
 }
