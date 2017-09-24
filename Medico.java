@@ -29,7 +29,7 @@ public class Medico {
      * @param experiencia
      * @param intensivista
      */
-    public Medico(String nombre, String nit, String dpi, int dia, int guardias, double salario, Strings colegiado, boolean especialista){
+    public Medico(String nombre, String nit, String dpi, int dia, int guardias, double salario, String colegiado, boolean especialista){
     	this.nombre = nombre;
     	this.nit = nit;
     	this.dpi = dpi;
